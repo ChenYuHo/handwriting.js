@@ -145,6 +145,14 @@ If the functionalities are turned on, the following functions will work, otherwi
 	can1.redo();
 	//if there are undo records, return to the state of the next stored step
 ```
+
+Note that, even included handwriting.canvas.js now, the previous way of calling recognition still works :
+```javascript
+	handwriting.recognize(trace, options, callback);
+```
+
+so that you can take advantage of the **handwriting.canvas** object, while not changing previous code.
+
 ---
 <h3 id="language">Supported Language</h3>
    

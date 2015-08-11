@@ -1,406 +1,393 @@
-<!DOCTYPE html><html><head><title>handwriting.js</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'></head><body><div id='preview-contents' class='note-content'>
-                        <div id="wmd-preview" class="preview-content"></div>
-                    <div id="wmd-preview-section-1" class="wmd-preview-section preview-content">
-
-</div><div id="wmd-preview-section-2" class="wmd-preview-section preview-content">
-
-<h1 id="handwritingjs">handwriting.js</h1>
-
-<p>A simple API access to the incredible handwriting recognition of Google IME</p>
-
-</div><div id="wmd-preview-section-3" class="wmd-preview-section preview-content">
-
-<h2 id="usage">Usage</h2>
-
-</div><div id="wmd-preview-section-4" class="wmd-preview-section preview-content">
-
-<h3 id="include-src">Include src</h3>
-
-</div><div id="wmd-preview-section-5" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"handwriting.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-</div><div id="wmd-preview-section-6" class="wmd-preview-section preview-content">
-
-<h3 id="capture-trace">Capture trace</h3>
-
-<p id="trace">The trace structure is like below:</p>
-
-</div><div id="wmd-preview-section-7" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> trace = </div><div>    [        <span class="hljs-comment">//the trace is an array of strokes</span></div><div>        [        <span class="hljs-comment">//a stroke is an array of pairs of captured (x, y) coordinates</span></div><div>            [<span class="hljs-number">300</span>, <span class="hljs-number">310</span>, <span class="hljs-number">320</span>, <span class="hljs-number">330</span>, <span class="hljs-number">340</span>], <span class="hljs-comment">//x coordinate</span></div><div>            [<span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>]  <span class="hljs-comment">//y coordinate</span></div><div>            <span class="hljs-comment">//each pair of (x, y) coordinates represents one sampling point </span></div><div>        ],</div><div>        [</div><div>            [<span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>],</div><div>            [<span class="hljs-number">300</span>, <span class="hljs-number">310</span>, <span class="hljs-number">320</span>, <span class="hljs-number">330</span>, <span class="hljs-number">340</span>]</div><div>        ]</div><div>    ];</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>For example, the trace above is composed of two strokes,</p>
-
-<p>(300, 320), (310, 320), (320, 320), (330, 320), (340, 320) <br>
-and <br>
-(320, 300), (320, 310), (320, 320), (320, 330), (320, 340),</p>
-
-<p>which is produced by writing “十”.</p>
-
-</div><div id="wmd-preview-section-8" class="wmd-preview-section preview-content">
-
-<h3 id="manage-options">Manage options</h3>
-
-<p>options argument is an optional object of following fields:</p>
-
-</div><div id="wmd-preview-section-6228" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> options = {</div><div>        width : <span class="hljs-number">800</span>,        <span class="hljs-comment">//int, width of the writing area, default: undefined</span></div><div>        height : <span class="hljs-number">800</span>,       <span class="hljs-comment">//int, height of the writing area, default: undefined</span></div><div>        language : <span class="hljs-string">"zh_TW"</span>, <span class="hljs-comment">//string, language of input trace, default: "zh_TW"</span></div><div>        numOfWords : <span class="hljs-number">1</span>,     <span class="hljs-comment">//int, number of words of input trace, default: undefined</span></div><div>        numOfReturn : <span class="hljs-number">5</span>,    <span class="hljs-comment">//int, number of maximum returned results, default: undefined</span></div><div>    };</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>For most conditions, only <strong>language</strong> field is <strong>required</strong>.  However, specifying writing area width and height helps in improving precision.</p>
-
-<p>See <a href="#language">Language Support</a></p></div><div id="wmd-preview-section-10" class="wmd-preview-section preview-content">
-
-<h3 id="specify-callback-function">Specify callback function</h3>
-
-<p>The recognition function will invoke the callback function argument passed in after recognition process.  The callback function should accept two arguments as shown below:</p>
-
-</div><div id="wmd-preview-section-11" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-keyword">var</span> callback = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result, err)</span></span>{</div><div>    <span class="hljs-keyword">if</span>(err) <span class="hljs-keyword">throw</span> err;</div><div>    <span class="hljs-keyword">else</span> <span class="hljs-built_in">console</span>.log(result);   </div><div>};</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>The returned result will be an array of string, for example, the <a href="#trace">trace above</a> (with other options set to default) generates:</p>
-
-</div><div id="wmd-preview-section-12" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    [ <span class="hljs-string">"十"</span>, <span class="hljs-string">"+"</span>, <span class="hljs-string">"一|"</span>, <span class="hljs-string">"一1"</span>, <span class="hljs-string">"一个"</span>, <span class="hljs-string">"-|"</span>, <span class="hljs-string">"一'"</span>, <span class="hljs-string">"-1"</span>, <span class="hljs-string">"一．"</span>, <span class="hljs-string">"-．"</span> ]</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>If no error occurred, err will be undefined.</p>
-
-</div><div id="wmd-preview-section-13" class="wmd-preview-section preview-content">
-
-<h3 id="call-recognition-function">Call recognition function</h3>
-
-<p>bound on a button as an example:</p>
-
-</div><div id="wmd-preview-section-5983" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"handwriting.recognize(trace, options, callback);"</span>&gt;</span>Recognize<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<hr></div><div id="wmd-preview-section-6284" class="wmd-preview-section preview-content">
-
-<h2 id="fully-functional-library">Fully functional library</h2>
-
-<p>Include <strong>handwriting.canvas.js</strong> instead of handwriting.js if you want to use the pre-implemented canvas behaviors.</p></div><div id="wmd-preview-section-16" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"./handwriting.canvas.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-</div><div id="wmd-preview-section-17" class="wmd-preview-section preview-content">
-
-<h3 id="usage-1">Usage</h3>
-
-<p>Declare html canvas as <strong>handwriting.Canvas</strong> object by passing that canvas element to the constructor:</p>
-
-</div><div id="wmd-preview-section-18" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"can"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"400"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"border: 2px solid; cursor: crosshair;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span></div><br><div><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript"></span></div><div>    <span class="hljs-keyword">var</span> can1 = <span class="hljs-keyword">new</span> handwriting.Canvas(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"can"</span>));</div><div><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>Now trace is automatically captured, stored in the object, and shown on the given element (either by mouse dragging or touch).</p>
-
-</div><div id="wmd-preview-section-19" class="wmd-preview-section preview-content">
-
-<h3 id="apis">APIs</h3>
-
-<p>The captured trace and other fields are independent through objects, so call the following functions exactly on which object you wish to take action to:</p>
-
-</div><div id="wmd-preview-section-6738" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    <span class="hljs-comment">//Set callback function</span></div><div>    can1.setCallBack(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data, err)</span> </span>{</div><div>        <span class="hljs-keyword">if</span>(err) <span class="hljs-keyword">throw</span> err;</div><div>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">console</span>.log(data);</div><div>    });</div><br><div>    <span class="hljs-comment">//Set line width shown on the canvas element (default: 3)</span></div><div>    can1.setLineWidth(<span class="hljs-number">5</span>);</div><br><div>    <span class="hljs-comment">//Set options</span></div><div>    can1.setOptions(</div><div>        {</div><div>            language: <span class="hljs-string">"ja"</span>,</div><div>            numOfReturn: <span class="hljs-number">3</span></div><div>        }</div><div>    );</div><br><div>    <span class="hljs-comment">//recognize captured trace</span></div><div>    can1.recognize();</div><br><div>    <span class="hljs-comment">//Clear canvas, captured trace, and stored steps</span></div><div>    can1.erase();</div><br></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre></div><div id="wmd-preview-section-8864" class="wmd-preview-section preview-content">
-
-<h4 id="undo-and-redo-functionality">undo and redo functionality</h4>
-
-<p>This feature is achieved by saving every stroke in object, however, such attempt consumes relatively higher memory, so undo and redo functionalities are disabled by default, to change the availability, simply call :</p></div><div id="wmd-preview-section-8215" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    <span class="hljs-comment">//only turn on undo functionality</span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>);</div><br><div>    <span class="hljs-comment">//turn on both functionalities</span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>note that redo functionality can be turned on only if undo functionality is also turned on</p></div><div id="wmd-preview-section-8991" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div>    <span class="hljs-comment">//calling any of the two functions below leads to the same consequence: turn off both undo, redo functionality, and clear stored steps (if any) </span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);</div><div>    can1.set_Undo_Redo(<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>);</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></code></pre>
-
-<p>If the functionalities are turned on, the following functions will work, otherwise, nothing will happen:</p></div><div id="wmd-preview-section-9418" class="wmd-preview-section preview-content">
-
-<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    can1.undo();</div><div>    <span class="hljs-comment">//set canvas and stored trace to the last state (stroke)</span></div><br><div>    can1.redo();</div><div>    <span class="hljs-comment">//if there are undo records, return to the state of the next stored step</span></div></div></code></pre>
-
-<hr>
-
-<h3 id="language">Supported Language</h3>
-
-<p><a href="http://www.google.com/inputtools/help/languages.html" target="_blank">Reference</a></p>
-
-<table>
-<thead>
-<tr>
-  <th align="center"> 語言代碼</th>
-  <th align="center">語言</th>
-  <th align="center">地區</th>
-</tr>
-</thead>
-<tbody><tr>
-  <td align="center"> af</td>
-  <td align="center"> 南非荷蘭文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> be</td>
-  <td align="center"> 白俄羅斯文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> bg</td>
-  <td align="center"> 保加利亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ca</td>
-  <td align="center"> 卡達隆尼亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> cs</td>
-  <td align="center"> 捷克文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> cy</td>
-  <td align="center"> 威爾斯文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> da</td>
-  <td align="center"> 丹麥文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> de</td>
-  <td align="center"> 德文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> el</td>
-  <td align="center"> 希臘文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> en</td>
-  <td align="center"> 英文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> es</td>
-  <td align="center"> 西班牙文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> et</td>
-  <td align="center"> 愛沙尼亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> eu</td>
-  <td align="center"> 巴斯克文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> fi</td>
-  <td align="center"> 芬蘭文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> fil</td>
-  <td align="center"> 菲律賓文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> fr</td>
-  <td align="center"> 法文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> gl</td>
-  <td align="center"> 加里西亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> hi</td>
-  <td align="center"> 北印度文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> hr</td>
-  <td align="center"> 克羅埃西亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ht</td>
-  <td align="center"> 海地文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> hu</td>
-  <td align="center"> 匈牙利文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> id</td>
-  <td align="center"> 印尼文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> is</td>
-  <td align="center"> 冰島文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> it</td>
-  <td align="center"> 義大利文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ja</td>
-  <td align="center"> 日文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ko</td>
-  <td align="center"> 韓文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> la</td>
-  <td align="center"> 拉丁文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> lt</td>
-  <td align="center"> 立陶宛文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> lv</td>
-  <td align="center"> 拉脫維亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> mk</td>
-  <td align="center"> 馬其頓文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ms</td>
-  <td align="center"> 馬來文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> nl</td>
-  <td align="center"> 荷蘭文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> no</td>
-  <td align="center"> 挪威文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> pl</td>
-  <td align="center"> 波蘭文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> pt</td>
-  <td align="center"> 葡萄牙文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> pt_BR</td>
-  <td align="center"> 葡萄牙文</td>
-  <td align="center"> (巴西)</td>
-</tr>
-<tr>
-  <td align="center">pt_PT</td>
-  <td align="center"> 葡萄牙文</td>
-  <td align="center"> (葡萄牙)</td>
-</tr>
-<tr>
-  <td align="center">ro</td>
-  <td align="center"> 羅馬尼亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> ru</td>
-  <td align="center"> 俄文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sk</td>
-  <td align="center"> 斯洛伐克文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sl</td>
-  <td align="center"> 斯洛維尼亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sq</td>
-  <td align="center"> 阿爾巴尼亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sr</td>
-  <td align="center"> 塞爾維亞文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sv</td>
-  <td align="center"> 瑞典文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> sw</td>
-  <td align="center"> 斯瓦希里文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> th</td>
-  <td align="center"> 泰文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> tr</td>
-  <td align="center"> 土耳其文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> uk</td>
-  <td align="center"> 烏克蘭文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> vi</td>
-  <td align="center"> 越南文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> zh</td>
-  <td align="center"> 中文</td>
-  <td align="center"></td>
-</tr>
-<tr>
-  <td align="center"> zh_CN</td>
-  <td align="center"> 中文</td>
-  <td align="center"> (中國)</td>
-</tr>
-<tr>
-  <td align="center">zh_TW</td>
-  <td align="center"> 中文</td>
-  <td align="center"> (台灣)</td>
-</tr>
-</tbody></table>
-
-
-<hr></div><div id="wmd-preview-section-21" class="wmd-preview-section preview-content">
-
-<h2 id="license">License</h2>
-
-<p>MIT licensed</p></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>handwriting.js</title>
+    <meta charset='utf-8'>
+    <link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id='preview-contents' class='note-content'>
+        <div id="wmd-preview" class="preview-content"></div>
+        <div id="wmd-preview-section-1" class="wmd-preview-section preview-content">
+        </div>
+        <div id="wmd-preview-section-2" class="wmd-preview-section preview-content">
+            <h1 id="handwritingjs">handwriting.js</h1>
+            <p>A simple API access to the incredible handwriting recognition of Google IME</p>
+        </div>
+        <div id="wmd-preview-section-3" class="wmd-preview-section preview-content">
+            <h2 id="usage">Usage</h2>
+        </div>
+        <div id="wmd-preview-section-4" class="wmd-preview-section preview-content">
+            <h3 id="include-src">Include src</h3>
+        </div>
+        <div id="wmd-preview-section-5" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"handwriting.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></code></pre>
+        </div>
+        <div id="wmd-preview-section-6" class="wmd-preview-section preview-content">
+            <h3 id="capture-trace">Capture trace</h3>
+            <p id="trace">The trace structure is like below:</p>
+        </div>
+        <div id="wmd-preview-section-7" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><span class="hljs-keyword">var</span> trace = </div><div>    [        <span class="hljs-comment">//the trace is an array of strokes</span></div><div>        [        <span class="hljs-comment">//a stroke is an array of pairs of captured (x, y) coordinates</span></div><div>            [<span class="hljs-number">300</span>, <span class="hljs-number">310</span>, <span class="hljs-number">320</span>, <span class="hljs-number">330</span>, <span class="hljs-number">340</span>], <span class="hljs-comment">//x coordinate</span></div><div>            [<span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>]  <span class="hljs-comment">//y coordinate</span></div><div>            <span class="hljs-comment">//each pair of (x, y) coordinates represents one sampling point </span></div><div>        ],</div><div>        [</div><div>            [<span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>, <span class="hljs-number">320</span>],</div><div>            [<span class="hljs-number">300</span>, <span class="hljs-number">310</span>, <span class="hljs-number">320</span>, <span class="hljs-number">330</span>, <span class="hljs-number">340</span>]</div><div>        ]</div><div>    ];</div></div></code></pre>
+            <p>For example, the trace above is composed of two strokes,</p>
+            <p>(300, 320), (310, 320), (320, 320), (330, 320), (340, 320)
+                <br> and
+                <br> (320, 300), (320, 310), (320, 320), (320, 330), (320, 340),</p>
+            <p>which is produced by writing “十”.</p>
+        </div>
+        <div id="wmd-preview-section-8" class="wmd-preview-section preview-content">
+            <h3 id="manage-options">Manage options</h3>
+            <p>options argument is an optional object of following fields:</p>
+        </div>
+        <div id="wmd-preview-section-6228" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><span class="hljs-keyword">var</span> options = {</div><div>        width : <span class="hljs-number">800</span>,        <span class="hljs-comment">//int, width of the writing area, default: undefined</span></div><div>        height : <span class="hljs-number">800</span>,       <span class="hljs-comment">//int, height of the writing area, default: undefined</span></div><div>        language : <span class="hljs-string">"zh_TW"</span>, <span class="hljs-comment">//string, language of input trace, default: "zh_TW"</span></div><div>        numOfWords : <span class="hljs-number">1</span>,     <span class="hljs-comment">//int, number of words of input trace, default: undefined</span></div><div>        numOfReturn : <span class="hljs-number">5</span>,    <span class="hljs-comment">//int, number of maximum returned results, default: undefined</span></div><div>    };</div></div></code></pre>
+            <p>For most conditions, only <strong>language</strong> field is <strong>required</strong>. However, specifying writing area width and height helps in improving precision.</p>
+            <p>See <a href="#language">Language Support</a></p>
+        </div>
+        <div id="wmd-preview-section-10" class="wmd-preview-section preview-content">
+            <h3 id="specify-callback-function">Specify callback function</h3>
+            <p>The recognition function will invoke the callback function argument passed in after recognition process. The callback function should accept two arguments as shown below:</p>
+        </div>
+        <div id="wmd-preview-section-11" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div><span class="hljs-keyword">var</span> callback = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result, err)</span></span>{</div><div>    <span class="hljs-keyword">if</span>(err) <span class="hljs-keyword">throw</span> err;</div><div>    <span class="hljs-keyword">else</span> <span class="hljs-built_in">console</span>.log(result);   </div><div>};</div></div></code></pre>
+            <p>The returned result will be an array of string, for example, the <a href="#trace">trace above</a> (with other options set to default) generates:</p>
+        </div>
+        <div id="wmd-preview-section-12" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div>    [ <span class="hljs-string">"十"</span>, <span class="hljs-string">"+"</span>, <span class="hljs-string">"一|"</span>, <span class="hljs-string">"一1"</span>, <span class="hljs-string">"一个"</span>, <span class="hljs-string">"-|"</span>, <span class="hljs-string">"一'"</span>, <span class="hljs-string">"-1"</span>, <span class="hljs-string">"一．"</span>, <span class="hljs-string">"-．"</span> ]</div></code></pre>
+            <p>If no error occurred, err will be undefined.</p>
+        </div>
+        <div id="wmd-preview-section-13" class="wmd-preview-section preview-content">
+            <h3 id="call-recognition-function">Call recognition function</h3>
+            <p>bound on a button as an example:</p>
+        </div>
+        <div id="wmd-preview-section-5983" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"handwriting.recognize(trace, options, callback);"</span>&gt;</span>Recognize<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></div></code></pre>
+            <hr>
+        </div>
+        <div id="wmd-preview-section-6284" class="wmd-preview-section preview-content">
+            <h2 id="fully-functional-library">Fully functional library</h2>
+            <p>Include <strong>handwriting.canvas.js</strong> instead of handwriting.js if you want to use the pre-implemented canvas behaviors.</p>
+        </div>
+        <div id="wmd-preview-section-16" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"./handwriting.canvas.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></code></pre>
+        </div>
+        <div id="wmd-preview-section-17" class="wmd-preview-section preview-content">
+            <h3 id="usage-1">Usage</h3>
+            <p>Declare html canvas as <strong>handwriting.Canvas</strong> object by passing that canvas element to the constructor:</p>
+        </div>
+        <div id="wmd-preview-section-18" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-html hljs xml"><div><div><span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"can"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"400"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"border: 2px solid; cursor: crosshair;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span></div><br><div><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript"></span></div><div>    <span class="hljs-keyword">var</span> can1 = <span class="hljs-keyword">new</span> handwriting.Canvas(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"can"</span>));</div><div><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></div></div></code></pre>
+            <p>Now trace is automatically captured, stored in the object, and shown on the given element (either by mouse dragging or touch).</p>
+        </div>
+        <div id="wmd-preview-section-19" class="wmd-preview-section preview-content">
+            <h3 id="apis">APIs</h3>
+            <p>The captured trace and other fields are independent through objects, so call the following functions exactly on which object you wish to take action to:</p>
+        </div>
+        <div id="wmd-preview-section-6738" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    <span class="hljs-comment">//Set callback function</span></div><div>    can1.setCallBack(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data, err)</span> </span>{</div><div>        <span class="hljs-keyword">if</span>(err) <span class="hljs-keyword">throw</span> err;</div><div>        <span class="hljs-keyword">else</span> <span class="hljs-built_in">console</span>.log(data);</div><div>    });</div><br><div>    <span class="hljs-comment">//Set line width shown on the canvas element (default: 3)</span></div><div>    can1.setLineWidth(<span class="hljs-number">5</span>);</div><br><div>    <span class="hljs-comment">//Set options</span></div><div>    can1.setOptions(</div><div>        {</div><div>            language: <span class="hljs-string">"ja"</span>,</div><div>            numOfReturn: <span class="hljs-number">3</span></div><div>        }</div><div>    );</div><br><div>    <span class="hljs-comment">//recognize captured trace</span></div><div>    can1.recognize();</div><br><div>    <span class="hljs-comment">//Clear canvas, captured trace, and stored steps</span></div><div>    can1.erase();</div><br></div></code></pre></div>
+        <div id="wmd-preview-section-8864" class="wmd-preview-section preview-content">
+            <h4 id="undo-and-redo-functionality">undo and redo functionality</h4>
+            <p>This feature is achieved by saving every stroke in object, however, such attempt consumes relatively higher memory, so undo and redo functionalities are disabled by default, to change the availability, simply call :</p>
+        </div>
+        <div id="wmd-preview-section-8215" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    <span class="hljs-comment">//only turn on undo functionality</span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>);</div><br><div>    <span class="hljs-comment">//turn on both functionalities</span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);</div></div></code></pre>
+            <p>note that redo functionality can be turned on only if undo functionality is also turned on</p>
+        </div>
+        <div id="wmd-preview-section-8991" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    <span class="hljs-comment">//calling any of the two functions below leads to the same consequence: turn off both undo, redo functionality, and clear stored steps (if any) </span></div><div>    can1.set_Undo_Redo(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);</div><div>    can1.set_Undo_Redo(<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>);</div></div></code></pre>
+            <p>If the functionalities are turned on, the following functions will work, otherwise, nothing will happen:</p>
+        </div>
+        <div id="wmd-preview-section-10044" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    can1.undo();</div><div>    <span class="hljs-comment">//set canvas and stored trace to the last state (stroke)</span></div><br><div>    can1.redo();</div><div>    <span class="hljs-comment">//if there are undo records, return to the state of the next stored step</span></div></div></code></pre>
+            <p>Note that, even included handwriting.canvas.js now, the previous way of calling recognition still works :</p>
+        </div>
+        <div id="wmd-preview-section-10591" class="wmd-preview-section preview-content">
+            <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div><div>    handwriting.recognize(trace, options, callback);</div></div></code></pre>
+            <p>so that you can take advantage of the <strong>handwriting.canvas</strong> object, while not changing previous code.</p>
+            <hr>
+            <h3 id="language">Supported Language</h3>
+            <p><a href="http://www.google.com/inputtools/help/languages.html" target="_blank">Reference</a></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th align="center"> 語言代碼</th>
+                        <th align="center">語言</th>
+                        <th align="center">地區</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center"> af</td>
+                        <td align="center"> 南非荷蘭文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> be</td>
+                        <td align="center"> 白俄羅斯文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> bg</td>
+                        <td align="center"> 保加利亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ca</td>
+                        <td align="center"> 卡達隆尼亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> cs</td>
+                        <td align="center"> 捷克文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> cy</td>
+                        <td align="center"> 威爾斯文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> da</td>
+                        <td align="center"> 丹麥文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> de</td>
+                        <td align="center"> 德文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> el</td>
+                        <td align="center"> 希臘文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> en</td>
+                        <td align="center"> 英文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> es</td>
+                        <td align="center"> 西班牙文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> et</td>
+                        <td align="center"> 愛沙尼亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> eu</td>
+                        <td align="center"> 巴斯克文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> fi</td>
+                        <td align="center"> 芬蘭文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> fil</td>
+                        <td align="center"> 菲律賓文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> fr</td>
+                        <td align="center"> 法文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> gl</td>
+                        <td align="center"> 加里西亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> hi</td>
+                        <td align="center"> 北印度文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> hr</td>
+                        <td align="center"> 克羅埃西亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ht</td>
+                        <td align="center"> 海地文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> hu</td>
+                        <td align="center"> 匈牙利文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> id</td>
+                        <td align="center"> 印尼文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> is</td>
+                        <td align="center"> 冰島文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> it</td>
+                        <td align="center"> 義大利文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ja</td>
+                        <td align="center"> 日文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ko</td>
+                        <td align="center"> 韓文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> la</td>
+                        <td align="center"> 拉丁文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> lt</td>
+                        <td align="center"> 立陶宛文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> lv</td>
+                        <td align="center"> 拉脫維亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> mk</td>
+                        <td align="center"> 馬其頓文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ms</td>
+                        <td align="center"> 馬來文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> nl</td>
+                        <td align="center"> 荷蘭文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> no</td>
+                        <td align="center"> 挪威文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> pl</td>
+                        <td align="center"> 波蘭文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> pt</td>
+                        <td align="center"> 葡萄牙文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> pt_BR</td>
+                        <td align="center"> 葡萄牙文</td>
+                        <td align="center"> (巴西)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">pt_PT</td>
+                        <td align="center"> 葡萄牙文</td>
+                        <td align="center"> (葡萄牙)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">ro</td>
+                        <td align="center"> 羅馬尼亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> ru</td>
+                        <td align="center"> 俄文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sk</td>
+                        <td align="center"> 斯洛伐克文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sl</td>
+                        <td align="center"> 斯洛維尼亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sq</td>
+                        <td align="center"> 阿爾巴尼亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sr</td>
+                        <td align="center"> 塞爾維亞文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sv</td>
+                        <td align="center"> 瑞典文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> sw</td>
+                        <td align="center"> 斯瓦希里文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> th</td>
+                        <td align="center"> 泰文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> tr</td>
+                        <td align="center"> 土耳其文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> uk</td>
+                        <td align="center"> 烏克蘭文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> vi</td>
+                        <td align="center"> 越南文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> zh</td>
+                        <td align="center"> 中文</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"> zh_CN</td>
+                        <td align="center"> 中文</td>
+                        <td align="center"> (中國)</td>
+                    </tr>
+                    <tr>
+                        <td align="center">zh_TW</td>
+                        <td align="center"> 中文</td>
+                        <td align="center"> (台灣)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </div>
+        <div id="wmd-preview-section-21" class="wmd-preview-section preview-content">
+            <h2 id="license">License</h2>
+            <p>MIT licensed</p>
+        </div>
+        <div id="wmd-preview-section-footnotes" class="preview-content"></div>
+    </div>
+</body>
+
+</html>
