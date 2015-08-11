@@ -100,7 +100,7 @@
         var w = [];
         w.push(this.handwritingX);
         w.push(this.handwritingY);
-        // w.push([]);
+        w.push([]);
         this.trace.push(w);
         this.drawing = false;
         if (this.allowUndo) this.step.push(this.canvas.toDataURL());
@@ -155,7 +155,7 @@
             if (this.allowRedo) {
                 this.redo_step.push(this.step.pop());
                 this.redo_trace.push(this.trace.pop());
-                this.erase();
+                this.cxt.clearRect(0, 0, this.width, this.height);
             }
         } else {
             if (this.allowRedo) {
@@ -170,8 +170,7 @@
     };
 
     handwriting.Canvas.prototype.redo = function() {
-        if (!this.allowRedo) return;
-        if (this.redo_step.length <= 0) return;
+        if (!this.allowRedo || this.redo_step.length <= 0) return;
         this.step.push(this.redo_step.pop());
         this.trace.push(this.redo_trace.pop());
         loadFromUrl(this.step.slice(-1)[0], this);
@@ -212,7 +211,6 @@
             }]
         });
         var xhr = new XMLHttpRequest();
-        console.log(data);
         xhr.addEventListener("readystatechange", function() {
             if (this.readyState === 4) {
                 switch (this.status) {

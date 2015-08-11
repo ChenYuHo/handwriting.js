@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>hangwriting.js</title>
+</head>
+
+<body>
+    <span style="display : inline-block">
+        <p>This is canvas 1 (Undo, Redo enabled)</p>
+        PenSize<input type="range" id="penSize" min="2" max="30" value="3">
+        <span id="lineWidth">3</span><br>
+
+        <canvas id="can" width="400" height="400" style="border: 2px solid; cursor: crosshair;"></canvas>
+        <br>
+        <form>
+            Language:
+            <select id="language">
+                <option value="zh_TW" selected="selected">Chinese</option>
+                <option value="ja">Japanese</option>
+                <option value="en">English</option>
+            </select>
+        </form>
+        <br>
+        <button onclick="can1.erase();">Erase1</button>
+        <button onclick="
+            var e = document.getElementById('language');
+            can1.setOptions({language: e.options[e.selectedIndex].value});
+            can1.recognize();
+        ">Send1</button>
+        <button onclick="can1.undo()">Undo1</button>
+        <button onclick="can1.redo()">Redo1</button>
+        <br>
+        result: <span id="result1"></span>
+    </span>
+    <span style="display : inline-block">
+        <p>This is canvas 2 (Undo, Redo disabled)</p>
+        PenSize2<input type="range" id="penSize2" min="2" max="30" value="10">
+        <span id="lineWidth2">10</span><br>
+        <canvas id="can2" width="400" height="400" style="border: 2px solid; cursor: crosshair;"></canvas>
+        <br>
+        <form>
+            Language:
+            <select id="language2">
+                <option value="zh_TW">Chinese</option>
+                <option value="ja">Japanese</option>
+                <option value="en" selected="selected">English</option>
+            </select>
+        </form>
+        <br>
+        <button onclick="can2.erase();">Erase2</button>
+        <button onclick="
+            var e = document.getElementById('language2');
+            can2.setOptions({language: e.options[e.selectedIndex].value});
+            can2.recognize();
+        ">Send2</button>
+        <button onclick="can2.undo()">Undo2</button>
+        <button onclick="can2.redo()">Redo2</button>
+        <br>
+        result: <span id="result2"></span>
+    </span>
+    <script type="text/javascript" src="./handwriting.canvas.js"></script>
+    <script type="text/javascript">
+    var can1 = new handwriting.Canvas(document.getElementById("can"), 3);
+    can1.setCallBack(function(data, err) {
+        if (err) throw err;
+        else document.getElementById("result1").innerHTML = data;
+    });
+    can1.set_Undo_Redo(true, true);
+    var can2 = new handwriting.Canvas(document.getElementById("can2"), 10);
+    can2.setCallBack(function(data, err) {
+        if (err) throw err;
+        else document.getElementById("result2").innerHTML = data;
+    });
+    can2.set_Undo_Redo(false, false);
+    var penSize = document.getElementById("penSize");
+    penSize.addEventListener("mousemove", function() {
+            document.getElementById("lineWidth").innerHTML = penSize.value;
+    });
+    penSize.addEventListener("change", function(){can1.setLineWidth(penSize.value);});
+    var penSize2 = document.getElementById("penSize2");
+    penSize2.addEventListener("mousemove", function() {
+            document.getElementById("lineWidth2").innerHTML = penSize2.value;
+    });
+    penSize2.addEventListener("change", function(){can2.setLineWidth(penSize2.value);});
+    </script>
+</body>
+
+</html>
