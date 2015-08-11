@@ -149,6 +149,7 @@ If the functionalities are turned on, the following functions will work, otherwi
 <h3 id="language">Supported Language</h3>
    
 [Reference](http://www.google.com/inputtools/help/languages.html)
+
 | 語言代碼 |     語言     |   地區   |
 |:--------:|:------------:|:--------:|
 | af       | 南非荷蘭文   |          |
