@@ -2,6 +2,11 @@
 
 A simple API access to the incredible handwriting recognition of Google IME
 
+## Example
+See [here] [1]
+
+  [1]: http://elton.idv.tw/handwriting.js        "here"
+
 ## Usage
 
 ### Include src
