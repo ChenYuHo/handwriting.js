@@ -99,7 +99,7 @@ Include **handwriting.canvas.js** instead of handwriting.js if you want to use t
 <script type="text/javascript" src="./handwriting.canvas.js"></script>
 ```
 
-###Usage
+### Usage
 Declare html canvas as **handwriting.Canvas** object by passing that canvas element to the constructor:
 
 ```html
