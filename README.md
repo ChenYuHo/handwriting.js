@@ -2,8 +2,8 @@
 
 A simple API access to the incredible handwriting recognition of Google IME
 
-## Example
-See [here](http://chenyuho.com/handwriting.js)
+## Demo
+See [here](https://www.chenyuho.com/project/handwritingjs)
 
 ## Usage
 
