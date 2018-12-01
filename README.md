@@ -3,7 +3,7 @@
 A simple API access to the incredible handwriting recognition of Google IME
 
 ## Demo
-See [here](https://www.chenyuho.com/project/handwritingjs)
+See [here](https://www.chenyuho.com/projects/handwritingjs)
 
 ## Usage
 
