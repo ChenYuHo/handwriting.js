@@ -180,62 +180,61 @@ so that you can take advantage of the **handwriting.canvas** object, while not c
 ---
 <h3 id="language">Supported Language</h3>
    
-[Reference](http://www.google.com/inputtools/help/languages.html)
+[Reference](https://www.google.com/inputtools/help/languages.html)
 
-| 語言代碼 |     語言     |   地區   |
-|:--------:|:------------:|:--------:|
-| af       | 南非荷蘭文   |          |
-| be       | 白俄羅斯文   |          |
-| bg       | 保加利亞文   |          |
-| ca       | 卡達隆尼亞文 |          |
-| cs       | 捷克文       |          |
-| cy       | 威爾斯文     |          |
-| da       | 丹麥文       |          |
-| de       | 德文         |          |
-| el       | 希臘文       |          |
-| en       | 英文         |          |
-| es       | 西班牙文     |          |
-| et       | 愛沙尼亞文   |          |
-| eu       | 巴斯克文     |          |
-| fi       | 芬蘭文       |          |
-| fil      | 菲律賓文     |          |
-| fr       | 法文         |          |
-| gl       | 加里西亞文   |          |
-| hi       | 北印度文     |          |
-| hr       | 克羅埃西亞文 |          |
-| ht       | 海地文       |          |
-| hu       | 匈牙利文     |          |
-| id       | 印尼文       |          |
-| is       | 冰島文       |          |
-| it       | 義大利文     |          |
-| ja       | 日文         |          |
-| ko       | 韓文         |          |
-| la       | 拉丁文       |          |
-| lt       | 立陶宛文     |          |
-| lv       | 拉脫維亞文   |          |
-| mk       | 馬其頓文     |          |
-| ms       | 馬來文       |          |
-| nl       | 荷蘭文       |          |
-| no       | 挪威文       |          |
-| pl       | 波蘭文       |          |
-| pt       | 葡萄牙文     |          |
-| pt_BR    | 葡萄牙文     | (巴西)   |
-| pt_PT    | 葡萄牙文     | (葡萄牙) |
-| ro       | 羅馬尼亞文   |          |
-| ru       | 俄文         |          |
-| sk       | 斯洛伐克文   |          |
-| sl       | 斯洛維尼亞文 |          |
-| sq       | 阿爾巴尼亞文 |          |
-| sr       | 塞爾維亞文   |          |
-| sv       | 瑞典文       |          |
-| sw       | 斯瓦希里文   |          |
-| th       | 泰文         |          |
-| tr       | 土耳其文     |          |
-| uk       | 烏克蘭文     |          |
-| vi       | 越南文       |          |
-| zh       | 中文         |          |
-| zh_CN    | 中文         | (中國)   |
-| zh_TW    | 中文         | (台灣)   |
+| Language              | 語言              | code  |
+|-----------------------|-------------------|-------|
+| Afrikaans             | 南非荷蘭文        | af    |
+| Albanian              | 阿爾巴尼亞文      | sq    |
+| Basque                | 巴斯克文          | eu    |
+| Belarusian            | 白俄羅斯文        | be    |
+| Bulgarian             | 保加利亞文        | bg    |
+| Catalan               | 卡達隆尼亞文      | ca    |
+| Chinese (Simplified)  | 中文 (簡體)       | zh_CN |
+| Chinese (Traditional) | 中文 (繁體)       | zh_TW |
+| Croatian              | 克羅埃西亞文      | hr    |
+| Czech                 | 捷克文            | cs    |
+| Danish                | 丹麥文            | da    |
+| Dutch                 | 荷蘭文            | nl    |
+| English               | 英文              | en    |
+| Estonian              | 愛沙尼亞文        | et    |
+| Filipino              | 菲律賓文          | fil   |
+| Finnish               | 芬蘭文            | fi    |
+| French                | 法文              | fr    |
+| Galician              | 加里西亞文        | gl    |
+| German                | 德文              | de    |
+| Greek                 | 希臘文            | el    |
+| Haitian               | 海地文            | ht    |
+| Hindi                 | 北印度文          | hi    |
+| Hungarian             | 匈牙利文          | hu    |
+| Icelandic             | 冰島文            | is    |
+| Indonesian            | 印尼文            | id    |
+| Irish                 | 愛爾蘭文          | ga    |
+| Italian               | 義大利文          | it    |
+| Japanese              | 日文              | ja    |
+| Korean                | 韓文              | ko    |
+| Latin                 | 拉丁語系          | la    |
+| Latvian               | 拉脫維亞文        | lv    |
+| Lithuanian            | 立陶宛文          | lt    |
+| Macedonian            | 馬其頓文          | mk    |
+| Malay                 | 馬來文            | ms    |
+| Norwegian             | 挪威文            | no    |
+| Polish                | 波蘭文            | pl    |
+| Portuguese (Brazil)   | 葡萄牙文 (巴西)   | pt_BR |
+| Portuguese (Portugal) | 葡萄牙文 (葡萄牙) | pt_PT |
+| Romanian              | 羅馬尼亞文        | ro    |
+| Russian               | 俄文              | ru    |
+| Serbian               | 塞爾維亞文        | sr    |
+| Slovak                | 斯洛伐克文        | sk    |
+| Slovenian             | 斯洛維尼亞文      | sl    |
+| Spanish               | 西班牙文          | es    |
+| Swahili               | 斯瓦希里文        | sw    |
+| Swedish               | 瑞典文            | sv    |
+| Thai                  | 泰文              | th    |
+| Turkish               | 土耳其文          | tr    |
+| Ukranian              | 烏克蘭文          | yk    |
+| Vietnamese            | 越南文            | vi    |
+| Welsh                 | 威爾斯文          | cy    |
 
 ***
 ## License
