@@ -182,6 +182,8 @@ so that you can take advantage of the **handwriting.canvas** object, while not c
    
 [Reference](https://www.google.com/inputtools/help/languages.html)
 
+**Note:** Google provides a supported language list, but not the language codes. The following codes are collected from the Internet and only `zh_TW, en, ja` are tested. If you notice weird recognition results then maybe the language code is wrong.
+
 | Language              | 語言              | code  |
 |-----------------------|-------------------|-------|
 | Afrikaans             | 南非荷蘭文        | af    |
