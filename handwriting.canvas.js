@@ -199,6 +199,13 @@
             options = this.options;
             callback = this.callback;
         } else if (!options) options = {};
+        var serviceEndpointURLs = {
+            "default": "https://www.google.com.tw/inputtools/request?ime=handwriting&app=mobilesearch&cs=1&oe=UTF-8",
+            "google_tw": "https://www.google.com.tw/inputtools/request?ime=handwriting",
+            "google_jp": "https://www.google.co.jp/inputtools/request?ime=handwriting",
+            "google": "https://www.google.com/inputtools/request?ime=handwriting",
+            "inputtools": "https://inputtools.google.com/request?ime=handwriting"
+        }
         var data = JSON.stringify({
             "options": "enable_pre_space",
             "requests": [{
@@ -240,7 +247,7 @@
 
             }
         });
-        xhr.open("POST", "https://www.google.com.tw/inputtools/request?ime=handwriting&app=mobilesearch&cs=1&oe=UTF-8");
+        xhr.open("POST", serviceEndpointURLs[options.serviceEndpoint] || serviceEndpointURLs["default"]);
         xhr.setRequestHeader("content-type", "application/json");
         xhr.send(data);
     };
