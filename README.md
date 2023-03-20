@@ -52,11 +52,12 @@ options argument is an optional object of following fields:
 
 ```javascript
 var options = {
-    width : 800,         //int, width of the writing area, default: undefined
-    height : 800,        //int, height of the writing area, default: undefined
-    language : "zh_TW",  //string, language of input trace, default: "zh_TW"
-    numOfWords : 1,      //int, number of words of input trace, default: undefined
-    numOfReturn : 5,     //int, number of maximum returned results, default: undefined
+    width : 800,                   //int, width of the writing area, default: undefined
+    height : 800,                  //int, height of the writing area, default: undefined
+    language : "zh_TW",            //string, language of input trace, default: "zh_TW"
+    serviceEndpoint: "google_tw",  //string, service endpoint URL used, default: "default"
+    numOfWords : 1,                //int, number of words of input trace, default: undefined
+    numOfReturn : 5,               //int, number of maximum returned results, default: undefined
 };
 ```
 
@@ -176,6 +177,18 @@ Note that, even included handwriting.canvas.js now, the previous way of calling 
 ```
 
 so that you can take advantage of the **handwriting.canvas** object, while not changing previous code.
+
+---
+<h3 id="serviceEndpointUrl">Supported Service Endpoint URLs</h3>
+
+| code       | URL                                                                                         |
+|------------|---------------------------------------------------------------------------------------------|
+| default    | https://www.google.com.tw/inputtools/request?ime=handwriting&app=mobilesearch&cs=1&oe=UTF-8 |
+| google_tw  | https://www.google.com.tw/inputtools/request?ime=handwriting                                |
+| google_jp  | https://www.google.co.jp/inputtools/request?ime=handwriting                                 |
+| google_kr  | https://www.google.co.kr/inputtools/request?ime=handwriting                                 |
+| google     | https://www.google.com/inputtools/request?ime=handwriting                                   |
+| inputtools | https://inputtools.google.com/request?ime=handwriting                                       |
 
 ---
 <h3 id="language">Supported Language</h3>
