@@ -203,6 +203,7 @@
             "default": "https://www.google.com.tw/inputtools/request?ime=handwriting&app=mobilesearch&cs=1&oe=UTF-8",
             "google_tw": "https://www.google.com.tw/inputtools/request?ime=handwriting",
             "google_jp": "https://www.google.co.jp/inputtools/request?ime=handwriting",
+            "google_kr": "https://www.google.co.kr/inputtools/request?ime=handwriting",
             "google": "https://www.google.com/inputtools/request?ime=handwriting",
             "inputtools": "https://inputtools.google.com/request?ime=handwriting"
         }
